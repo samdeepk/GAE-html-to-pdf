@@ -1,0 +1,5 @@
+html5lib==1.0b8
+reportlab
+six 
+xhtml2pdf
+flask
