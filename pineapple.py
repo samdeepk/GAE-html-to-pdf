@@ -16,257 +16,382 @@ def hello_pdf():
 
     packet = StringIO.StringIO()
 
-    sourcehtml = u"""<!DOCTYPE html> 
-    <html>
-    <head>
-        <title>Annual Examinations దిగుమతి కై सरल</title>
-        
-        <style>
-        @font-face {
-        font-family: SreeKrushnadevaraya;
-        src: url("/Users/skoduri/me/test/GAE-html-to-pdf/SreeKrushnadevaraya.ttf");
-        }
-        .tets{background-image: url('https://storage.googleapis.com/html2pdf-statics/gcp.png'); }
-        body {
-            
-        font-family: SreeKrushnadevaraya;
-        }
-    </style>  
-    </head>
-    <body style="font-family: times; font-size: 15px;">
-    <div style="font-size: 13px;text-align: right; font-family: 'Sree Krushnadevaraya'"> Centre&#58; దిగుమతి కై  सरल   
-తెలుగు వర్ణమాల
+    sourcehtml = u"""<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body style="width: 100%; font-family: Times, serif;">
 
-హలో
- </div><br/>
- <div class="tets" style="border:1px solid red; width:100px; height:100px;">
+<table style="width: 100%;">
+    <tr>
+        <td rowspan="4" style=" width:20%;"><img height="240px" width="240px" src="./image01.png"></td>
+        <td style="text-align: center; font-family: Times, serif; font-size: 17px; font-weight: bold; width:60%;">POTTI SREERAMULU TELUGU UNIVERSITY</td>
+        <td rowspan="4" style="width:20%;"><img height="220px" width="240px" src="./image03.png"></td>
+    </tr>
+    <tr>
+        <td style="text-align: center; font-size: 17px; width:60%">M.V.K.R. INTERNATIONAL TELUGU CENTRE</td>
+     </tr>
+    <tr>
+        <td style="text-align: center;font-size: 14px; width:60%">Public Gardens, Hyderabad - 500 004 Andhra Pradesh, India</td>
+    </tr>
+    <tr>
+        <td style="text-align: center; font-size: 14px; width:60%">Ph &#58; 040 - 2323 4490 Fax &#58; 040 - 2323 6045 e-mail &#58; itc@teluguuniversity.ac.in</td>
+    </tr>    
+</table>
 
- <img src="https://storage.googleapis.com/html2pdf-statics/gcp.png"></div>
- <div >
+<div style="text-align: center; font-size: 17px; font-weight: bold; width:100%">CERTIFICATE COURSE IN TELUGU (Four Years) - 2015  - 2016</div>
+<div style="text-align: center; font-size: 17px; font-weight: bold; width:60%">(SILICONANDHRA - MANABADI)</div>
 
- 
-     <table style="width: 100%;">
-        <tr>
-            <td rowspan="4" style=" border:1px solid black; width:150px;"></td>
-            <td style="text-align: center; font-family: Times, serif; font-size: 17px; font-weight: bold; width:800px;">POTTI SREERAMULU TELUGU UNIVERSITY</td>
-            <td rowspan="4" style="width:100px;"></td>
-        </tr>
-        <tr>
-            <td style="text-align: center;font-size: 14px; width:700px;">Public Gardens, Hyderabad - 500 004 Andhra Pradesh, India</td>
-        </tr>
-        <tr>
-            <td style="text-align: center; font-size: 14px; width:700px;">Ph &#58; 040 - 2323 4490 Fax &#58; 040 - 2323 6045 e-mail &#58; itc@teluguuniversity.ac.in</td>
-        </tr>
-        <tr>
-            <td style="text-align: center; font-size: 17px; font-weight: bold; width:700px;">CERTIFICATE COURSE IN TELUGU (Four Years)</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td style="text-align: center; font-size: 15px; width:700px;">        
-                <div style=" font-size: 15px; text-align: center;margin-top: 10px;"><b>(SILICONANDHRA - MANABADI)</b><br/></span><span style=" font-size: 15px;"> 2015 - 2016 Annual Examinations</span>
-            </td>
-            <td></td>
-        </tr>
-    </table>
-
-<br/>
-    <table style="">
-        <tr style="margin-bottom:1px;">
-            <td style="width:60%; color: grey; font-size: 15px;" align="left">APPLICATION FORM NO.    Not Applicable</td>
-            <td style="width:35%; padding-left:8px; border:1px solid black; padding-top:3px;">Hall Ticket No.</td>
-            <td style="width:5%;"></td>
-        </tr>
-        <tr style="margin-top:1px; font-size: 15px;">
-            <td style="width:65%;"></td>
-            <td style="width:35%; padding-top:3px; text-align:center">(To be filled by the Office)</td>
-            <td style="width:5%;"></td>
-        </tr>
-    </table>
-
-    <table style="margin-top: 5px; width:100%;">
-        <tr>
-            <td style=" font-size: 15px; width: 140px;">ManaBadi Location&#58;</td>
-            <td style="width: 30%;"><hr/></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td style="text-align: center; font-size: 15px;">(City, STATE)</td>
-        </tr>
-    </table>
+ <hr>
+    <div style="font-size: 15px; font-weight: bold;">Sr. No.&#58;</div>
+    <div style="text-align: center; font-size: 28px; font-weight: bold;">Student Registration Application Form</div>
     <br/>
-    <div style="font-size: 15px;">Name of the Association: <b>SiliconAndhra ManaBadi</b></div>
-    <div style="font-size: 15px;">Name of the Course (circle one): Prakasam (Jr.Certificate) <b>OR</b> Prabhasam (Sr.Certificate)   </div>
-    
-    <table style="width: 100%; font-size: 13px;">
+    <table style="width: 100%; font-size: 14px;">
         <tr>
-            <td style="width: 50%; border: 1px solid black; border-collapse: collapse; padding-top: 3px; padding-left: 3px;">SUBJECT&#58; <b>TELUGU</b></td>
-            <td style="width: 50%; border: 1px solid black; border-collapse: collapse; padding-top: 3px; padding-left: 3px;">BATCH&#58;  <b>Not Applicable</b></td>
+            <td style="width: 4%;">1.</td>
+            <td style="width: 42%;"></td>
+            <td style="width: 48%; ">&#58; Silicon Andhra ManaBadi</td>
+        </tr>
+        <tr>
+            <td style="width: 4%; "></td>
+            <td style="width: 42%; ">Name of the Institution & Address</td>
+            <td style="width: 48%; ">7912 August Lane, Cupertino CA 95014, USA</td>
         </tr>
     </table>
-
-    <table style="width: 90%; margin-top: 28px;">
-        <tr>
-            <td style="width: 40%;font-size: 15px;"></td>
-            <td style="color: grey;font-size: 15px;">Examination Fee</td>
-            <td style="color: grey;font-size: 15px;">&#58;</td>
-            <td style="color: grey;font-size: 15px; text-align: center;">Not Applicable</td>
-        </tr>
-        <tr>
-            <td style="width: 40%;font-size: 15px;"></td>
-            <td style="color: grey;font-size: 15px;">Late Fee</td>
-            <td style="color: grey;font-size: 15px;">&#58;</td>
-            <td style="color: grey;font-size: 15px; text-align: center;">Not Applicable</td>
-        </tr>
-        <tr>
-            <td style="width: 40%;font-size: 15px;"></td>
-            <td style="color: grey;font-size: 15px;">Total</td>
-            <td style="color: grey;font-size: 15px;">&#58;</td>
-            <td style="color: grey; text-align: center;font-size: 15px;">Not Applicable</td>
-        </tr>
-    </table>
-
     <br/><br/>
-
-    <table style="width: 100%;">
-        <tr style="color: grey;">
-            <td style="width: 60px;font-size: 13px;">D.D. No.</td>
-            <td style="width: 60px; font-size: 13px;"><hr/></td>
-            <td style="width: 50px;font-size: 13px; padding-left:15px;">Date&#58;</td>
-            <td style="width: 120px;font-size: 13px; padding-left:15px;"><hr/></td>
-            <td style="width: 30px;font-size: 13px;">Rs.</td>
-            <td style="width: 120px;font-size: 13px;"><hr/></td>
-            <td style="width: 120px;font-size: 13px;">Name of the Bank</td>
-            <td style="width: 100px;font-size: 13px;"><hr/></td>
+    <table style="width: 100%; font-size: 14px;">
+        <tr>
+            <td style="width: 5%;">2.</td>
+            <td style="width: 37%;"></td>
+            <td style="width: 10%; ">&#58; STATE&#58;</td>
+            <td style="width: 25%; border-bottom: 1px solid black; ">{{state}}</td>
+            <td style="width: 20%;"></td>
+        </tr>
+    </table>
+    <table style="width: 100%; font-size: 14px;">
+        <tr style="padding-top:5px;">
+            <td style="width: 5%;"></td>
+            <td style="width: 40%;">Name of the Country & State</td>
+            <td style="width: 11%;">COUNTRY&#58;</td>
+            <td style="width: 25%; border-bottom: 1px solid black; ">{{country}}</td>
+            <td style="width: 24%;"></td>
         </tr>
     </table>
 
     <br/>
-    <table style="font-size: 14px; width:100%">
+    <table style="width: 100%; font-size: 14px;">
         <tr>
-            <td rowspan="11" style="width: 23%;height: 1px; border:1px solid black; font-size: 12px; padding: 1%; margin-top: 2px; margin-left: 5px; margin-right: 0px;">
-            Passport size photo of the Candidate to be attested by the Secretary &#47;Head of the Institution concerned with seal of the Office affixed over it.
-            <td style="width:5%"></td>
-            <td style=" font-size: 15px; line-height: 30px;" ><b>NOTE&#58;</b></td>
+            <td style="width: 5%; ">3.</td>
+            <td style="width: 45%; "></td>
+            <td style="width: 50%; "></td>
         </tr>
         <tr>
-            <td style="width:5%"></td>
-            <td style="width:60%">1.&#32;&#32;The Candidate should apply separately for each course for each year.</td>
+            <td style="width: 5%; "></td>
+            <td style="width: 45%; ">Affiliation details</td>
+            <td style="width: 50%; ">{{&#58;N/A}}</td>
         </tr>
         <tr>
-            <td style="width:5%"></td>
-            <td style="width:60%">2.&#32;&#32;Candidate&#39;s recent Passport size photo should be affixed.</td>
+            <td style="width: 5%; "></td>
+            <td style="width: 45%; ">(Mention affiliation number and year)</td>
         </tr>
-        <tr><td></td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr>
     </table>
+
+    <table style="width: 100%; font-size: 14px; margin-top:12px;">
+        <tr>
+            <td style="width: 5%;">4.</td>
+            <td style="width: 40%;"></td>
+            <td style="width: 1%;">&#58;{{last_name}}{{first_name}}{{middle_name}}</td>
+            <td style="width: 54%;  border-bottom: 1px solid black; "></td>
+        </tr>
+        <tr>
+            <td style="width: 5%; "></td>
+            <td style="width: 40%; ">Name of the Candidate in Full</td>
+            <td style="width: 1%;"></td>
+            <td style="width: 54%; padding-top:3px;">(Last Name, First Name and Middle Name)</td>
+        </tr>
+        <tr>
+            <td style="width: 5%; "></td>
+            <td style="width: 40%; ">(CAPITAL LETTERS)</td>
+            <td style="width: 1%;"></td>
+            <td style="width: 54%;"></td>
+        </tr>
+    </table>
+
+    <table style="width: 100%; font-size: 14px; margin-top:12px;">
+        <tr>
+            <td style="width: 5%;">5.</td>
+            <td style="width: 40%;"></td>
+            <td style="width: 1%;">&#58;</td>
+            <td style="width: 53%; border-bottom: 1px solid black; ">{{father_lastname}}{{father_firstname}}</td>
+        </tr>
+        <tr>
+            <td style="width: 5%; "></td>
+            <td style="width: 40%; padding-top:3px;">Father&#39;s  Husband&#39;s Name</td>
+            <td style="width: 1%;"></td>
+            <td style="width: 53%;">(Last Name, First Name)</td>
+        </tr>
+    </table>
+
+    <table style="width: 100%; font-size: 14px; margin-top:12px;">
+        <tr>
+            <td style="width: 5%; ">6.</td>
+            <td style="width: 40%; "> </td>
+            <td style="width: 20%; border-bottom: 1px solid black;"> &#58; {{date_birth}}</td>
+        </tr>
+        <tr>
+            <td style="width: 5%; "></td>
+            <td style="width: 40%; ">Candidate&#39;s Date of Birth & Age </td>
+            <td style="width: 20%;"></td>
+        </tr>
+    </table>
+
+    <table style="width: 100%; font-size: 14px; margin-top:12px;">
+        <tr>
+            <td style="width: 5%; ">7.</td>
+            <td style="width: 40%; "></td>
+            <td style="width: 48%; "></td>
+        </tr>
+        <tr>
+            <td style="width: 5%; "></td>
+            <td style="width: 40%; ">Affiliation details</td>
+            <td style="width: 48%; ">&#58;{{N/A}}</td>
+        </tr>
+    </table>
+
+    <table style="width: 100%; font-size: 14px; margin-top:15px; padding-top:3px;">
+        <tr>
+            <td style="width: 5%;">8.</td>
+            <td style="width: 40%;"></td>
+            <td style="width: 8%;">&#58;Address&#58;</td>
+            <td style="width: 47%; border-bottom: 1px solid black;"> {{address}}</td>
+        </tr>
+        <tr>
+            <td style="width: 5%;"></td>
+            <td style="width: 41%;">Current Address  Email</td>
+            <td style="width: 8%;"></td>
+            <td style="width: 46%; border-bottom: 1px solid black;">{{address}}</td>
+        </tr>
+        <tr>
+            <td style="width: 5%;"></td>
+            <td style="width: 41%;"></td>
+            <td style="width: 8%;">Email&#58;</td>
+            <td style="width: 46%; border-bottom: 1px solid black;">{{email}}</td>
+        </tr>
+        <tr>
+            <td style="width: 5%;"></td>
+            <td style="width: 41%;"></td>
+            <td style="width: 8%;">Phone&#58;</td>
+            <td style="width: 46%; border-bottom: 1px solid black;">{{phone}}</td>
+        </tr>
+    </table>
+
+    <table style="width: 100%; font-size: 14px; margin-top:20px;">
+        <tr>
+            <td style="width: 5%; ">9.</td>
+            <td style="width: 41%; "></td>
+            <td style="width: 48%; ">&#58;{{N/A}}</td>
+        </tr>
+        <tr>
+            <td style="width: 5%; "></td>
+            <td style="width: 41%; ">Mother tongue </td>
+            <td style="width: 48%; "></td>
+        </tr>
+    </table>
+<br>
+    <table style="width: 100%; font-size: 14px;">
+        <tr>
+            <td style="width: 5%; ">10.</td>
+            <td style="width: 41%; "></td>
+            <td style="width: 48%; ">&#58;{{N/A}}</td>
+        </tr>
+        <tr>
+            <td style="width: 5%; "></td>
+            <td style="width: 41%; ">Nationality</td>
+            <td style="width: 48%; "></td>
+        </tr>
+    </table>
+
+    <br/>
+    <table style="width: 100%; font-size: 14px;">
+        <tr>
+            <td style="width: 5%; ">11.</td>
+            <td style="width: 41%; "></td>
+            <td style="width: 48%; ">&#58;{{N/A}}</td>
+        </tr>
+        <tr>
+            <td style="width: 5%; "></td>
+            <td style="width: 41%; ">Please tick (&#10004;) the appropriate column</td>
+            <td style="width: 48%; "></td>
+        </tr>
+    </table>
+    <table style="width: 60%; font-size: 14px;">
+        <tr>
+            <td style="width: 5%;"></td>
+            <td style="width: 10%; color:white">1</td>
+            <td style="width: 10%; text-align:center; border:1px solid black; width:20px; height:8px"></td>
+            <td style="width: 10%; "></td>
+            <td style="width: 10%; text-align:center; border:1px solid black; width:20px; height:8px"</td>
+            <td style="width: 10%; "></td>
+            <td style="width: 10%; text-align:center; border:1px solid black; width:20px; height:8px"></td>
+            <td style="width: 10%; "></td>
+            <td style="width: 10%; text-align:center; border:1px solid black; width:20px; height:8px"></td>
+        </tr>
+        <tr>
+            <td style="width: 5%;"></td>
+            <td style="width: 10%; text-align:center;">Male</td>
+            <td style="width: 10%; text-align:center; width:20px; height:8px"></td>
+            <td style="width: 10%; text-align:center;">Female</td>
+            <td style="width: 10%; text-align:center; width:20px; height:8px"</td>
+            <td style="width: 10%; text-align:center;">Married</td>
+            <td style="width: 10%; text-align:center; width:20px; height:8px"></td>
+            <td style="width: 10%; text-align:center;">Unmarried</td>
+            <td style="width: 10%; text-align:center; width:20px; height:8px"></td>
+        </tr>
+    </table>
+    <table style="width: 60%; font-size: 14px;">
+        <tr>
+            <td style="width: 5%;"></td>
+            <td style="width: 15%; color:white">1</td>
+            <td style="width: 10%; text-align:center; border:1px solid black; width:20px; height:8px"></td>
+            <td style="width: 10%; "></td>
+            <td style="width: 10%; text-align:center; border:1px solid black; width:20px; height:8px"</td>
+            <td style="width: 10%; "></td>
+            <td style="width: 10%; text-align:center; border:1px solid black; width:20px; height:8px"></td>
+        </tr>
+        <tr>
+            <td style="width: 5%;"></td>
+            <td style="width: 15%; text-align:center;">Phy. Handicapped</td>
+            <td style="width: 10%; text-align:center; width:20px; height:8px"></td>
+            <td style="width: 10%; text-align:center;">Urban</td>
+            <td style="width: 10%; text-align:center; width:20px; height:8px"</td>
+            <td style="width: 10%; text-align:center;">Rural</td>
+            <td style="width: 10%; text-align:center; width:20px; height:8px"></td>
+        </tr>
+    </table>
+<br/><br/>
+    <table style="width: 100%; font-size: 14px;">
+        <tr>
+            <td style="width: 5%;">12.</td>
+            <td style="width: 40%;"></td>
+            <td style="width: 55%;">&#58;</td>
+        </tr>
+        <tr>
+            <td style="width: 5%;"></td>
+            <td style="width: 50%;">Educational Qualifications</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <table style=" width:50%; font-size: 14px; padding-top:2px;">
+        <tr style=" ">
+            <td rowspan="6" style="border: 1px solid transparent; width:5%;"></td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center;">Name Of <br/> the Course</td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center">Name of the <br/> University</td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center">Month & Year <br/> of Pass</td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center">Second <br/> Language</td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center">Optional Subjects</td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center">Percentage <br/> of Marks <br/>(Out of 100)</td>
+        </tr>
+        <tr style="">
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center">Pravesam</td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center">SiliconAndhra ManaBadi</td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center"></td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center">N/A</td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center">N/A</td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center"></td>
+        </tr>
+        <tr style=" ">
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center">Prasunam</td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center">SiliconAndhra ManaBadi</td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center"></td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center">N/A</td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center">N/A</td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center"></td>
+        </tr>
+        <tr style="  ">
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center">Prakasam</td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center">SiliconAndhra ManaBadi</td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center"></td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center">N/A</td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center">N/A</td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center"></td>
+        </tr>
+        <tr style=" ">
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center">Pramodam</td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center">SiliconAndhra ManaBadi</td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center"></td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center">N/A</td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center">N/A</td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center"></td>
+        </tr>
+        <tr style="">
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center">Prabhasam</td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center">SiliconAndhra ManaBadi</td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center"></td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center">N/A</td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center">N/A</td>
+            <td style=" border: 1px solid black; border-collapse: collapse; text-align: center"></td>
+        </tr>
+    </table>
+<br/><br/>
+    <div style="font-size: 15px;">I hereby declare that the above particulars are true to the best of my knowledge and belief. In case of any defect 
+    or false information found in the above particulars, of a later date, the University can take disciplinary action against
+    me. I solemnly pledge to follow the rules and regulations stipulated by the University from time to time.</div>
 
 <br/><br/>
-    <div style="margin:6px;font-size: 15px;">1.   Name of the Candidate in full (in block letters):
-            <div style="font-size: 12px; margin-left:8px;">(According to the registration) <b>(Last name, First Name. Middle Name)</b></div>
-    </div>
-    <div style="margin:6px; font-size: 15px;">2.   Father&#39;s Name <b>(Last Name, First Name)&#58;</b></div>
-    <table style="width: 100%; margin:8px;">
+    <table style="font-size: 17px; width:100%;">
         <tr>
-            <td style="width: 20px;font-size: 15px;">3.</td>
-            <td style="width: 265px; font-size: 15px;">Details of the Papers to be appeared:</td>
-            <td style="width: 70px; font-size: 15px;"></td>
-            <td style="width: 120px; font-size: 15px;">Subject&#58; N&#47;A</td>
-            <td style="width: 120px; font-size: 15px;">Year&#58; <b>2015-16</b></td>
-            <td style="width: 120px; font-size: 15px;">Department</td>
+            <td style="width:7%"></td>
+            <td style="width:63%;">:</td>
+            <td style="width:30%">{{sign}}</td>
+        </tr>
+        <tr>
+            <td style="width:7%">Date</td>
+            <td style="width:63%;">: {{date}}</td>
+            <td style="width:30%">Signature of the Student</td>
         </tr>
     </table>
-    <table style="color: grey; width: 100%; margin:0px 0px 0px 10px;">
+<br/>
+<br/>
+<br/><br/><br/><br/>
+    <table style="font-size: 17px;">
         <tr>
-            <td style="width: 25%; font-size: 15px;">1. Paper-I</td>
-            <td style="width: 25%; font-size: 15px;">2. Paper-II</td>
-            <td style="width: 33%; font-size: 15px;">3. Paper-III(Viva-Voce)</td>
+            <td style="margin-left:50px;">{{}}</td>
+            <td style="text-align:center">{{director_sign}}}</td>
+        </tr>
+        <tr>
+            <td>Signature of the Institution </td>
+            <td style="text-align:center">Director</td>
+        </tr>
+        <tr>
+            <td style="margin-left:50px;">With Seal   </td>
+            <td style="text-align:center">M.V.K.R. International Telugu Centre</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td style="text-align:center">P.S. Telugu University</td>
         </tr>
     </table>
-    <table style="width: 100%;margin: 8px;">
-        <tr style="height: 30px;">
-            <td style="font-size: 15px;">4. Father&#39;s Email id&#58;</td>
-            <td style="font-size: 15px;">Mother&#39;s Email id&#58;</td>
-        </tr>
-        <tr style="height: 30px;">
-            <td style="font-size: 15px;">5. Fathers&#39;s Cell Ph&#35;&#58;</td>
-            <td style="font-size: 15px;">Mother&#39;s Cell Ph&#35;&#58;</td>
-        </tr>
-    </table>
-    <div style="margin:8px;font-size: 15px;">6.  Did the student appear for Junior Course Exam&#63; Yes or No (circle one)</div>
-    <div style="margin:8px;font-size: 15px;">7.   Details of the Examinations Passed (for marks, refer to the portal)</div>
-    <table style="width: 100%;border-collapse: collapse; padding-top: 3px; padding-left: 3px;">
-        <tr style="height: 50px;">
-            <th style="text-align: center;font-size: 15px;width: 25%;border: 1px solid black;">Name of the <br/> Examination</th>
-            <th style="text-align: center;font-size: 15px; width: 25%;border: 1px solid black;">Name of the University &#47; Institution</th>
-            <th style="text-align: center;font-size: 15px; width: 10%;border: 1px solid black;">Year of Pass</th>
-            <th style="text-align: center;font-size: 15px; width: 35%;border: 1px solid black;">Pass details (Marks&#47; 100)&#58;Final aggregate score</th>
-        </tr>
-        <tr>
-            <td style="width: 25%;border: 1px solid black;font-size: 15px;">Pravesam</td>
-            <td style="width: 25%;border: 1px solid black;font-size: 15px;">SiliconAndhra ManaBadi</td>
-            <td style="width: 10%;border: 1px solid black;font-size: 15px;"></td>
-            <td style="width: 35%;border: 1px solid black;font-size: 15px;font-size: 15px;"></td>
-        </tr>
-        <tr>
-            <td style="width: 25%;border: 1px solid black;font-size: 15px;">Prasunam</td>
-            <td style="width: 25%;border: 1px solid black;font-size: 15px;">SiliconAndhra ManaBadi</td>
-            <td style="width: 10%;border: 1px solid black;font-size: 15px;"></td>
-            <td style="width: 35%;border: 1px solid black;font-size: 15px;"></td>
-        </tr>
-        <tr>
-            <td style="width: 25%;border: 1px solid black;font-size: 15px;">Prakasam(Jr. Certificate)</td>
-            <td style="width: 25%;border: 1px solid black;font-size: 15px;">SiliconAndhra ManaBadi</td>
-            <td style="width: 10%;border: 1px solid black;font-size: 15px;"></td>
-            <td style="width: 35%;border: 1px solid black;font-size: 15px;"></td>
-        </tr>
-        <tr>
-            <td style="width: 25%;border: 1px solid black;font-size: 15px;">Pramodam </td>
-            <td style="width: 25%;border: 1px solid black;font-size: 15px;">SiliconAndhra ManaBadi</td>
-            <td style="width: 10%;border: 1px solid black;font-size: 15px;"></td>
-            <td style="width: 35%;border: 1px solid black;font-size: 15px;"></td>
-        </tr>
-        <tr>
-            <td style="width: 25%;border: 1px solid black;font-size: 15px;">Prabhasam (Sr. Certificate)</td>
-            <td style="width: 25%;border: 1px solid black;font-size: 15px;">SiliconAndhra ManaBadi</td>
-            <td style="width: 10%;border: 1px solid black;font-size: 15px;"></td>
-            <td style="width: 35%;border: 1px solid black;font-size: 15px;"></td>
-        </tr>
-    </table>
+<br/>
+<br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-    <div style="margin:8px;font-size: 15px; color:gray;">8.   Whether you have debarred/rusticated in            : NOT APPLICABLEEarlier public examinations, if so, furnish the details</div>
-    <div style="margin:8px;font-size: 15px; color:gray;">9.   Whether you are appearing for any other Examination   : NOT APPLICABLE</div>
-    <div style="padding-left:12px; font-size: 15px; color:gray;">Of the University / Other Universities along with this,<br/>If so, what examinations</div>
-    <div style="margin:8px;font-size: 15px; color:gray;">10.   Permanent Address: Not Applicable</div>
-    <br/><br/>
-        <div style=" font-size: 15px; text-align: center; margin: 11px 0px 0px 5px;"><b><u>DECLARATION OF THE CANDIDATE</u></b></div>
-        <div style="text-align:center">I do hereby declare that the above particulars furnished by me are true and correct to the best of my knowledge. </div>
-                <br/>
-        <div>Place &#58;</div>
-        <br/>
-        <table>
-            <tr>
-                <td style="width:65%">Date &#58;</td>
-                <td style="width:35%"><i>Signature of the Student</i></td>
-            </tr>
-        </table>
-        <br/><br/><br/>
-        <div style=" font-size: 15px; text-align: center; margin: 11px 0px 0px 5px;"><b><u>CERTIFICATE BY THE HEAD OF THE DEPARTMENT/PRINCIPAL</u></b></div>
-        <div>This is to certify that the above candidate is a regular student of this Institution during the year 
-        2015  -  2016. His/her character is good and the facts mentioned by him/her in the application form have been verified 
-        and found to be correct. He/She has appeared/not appeared before for this Examination in the year 201______ from this 
-        Institution with Roll No. _______________.
-        </div>
-<br/><br/><br/>
-        <table>
-            <tr>
-                <td style="width:65%">Dated &#58;___________20</td>
-                <td style="width:35%"><i>Signature of the Institution</i></td>
-            </tr>
-            <tr>
-                <td style="width:65%"></td>
-                <td style="width:35%"><i> (with Office Seal)</i></td>
-            </tr>
-        </table>
-    </body>
+<div style="text-align:center; font-size: 21px;"><b>Rules & Regulations</b></div>
+<ol style="font-size: 16px;">
+    <li><br/>Incomplete applications will be summarily rejected.<li>
+    <li><br/>Any false information furnished by the candidate and or if the information furnished not in accordance with the rules and regulations, stipulate therein the admission is liable for cancellation<li>
+    <li><br/> The following shall be enclosed with the application
+        <br/>Affix latest passport size photograph, in the specified place and enclose an extra photograph for office use.
+        <br/>b)<br>A set of Xerox copies of S.S.C. Marks Statement or your Education Qualifications.
+    <li>
+    <li>The application, duly filled-in, along with the necessary enclosures, should be sent to the 
+    <b>Director I/c, M.V.K.R. International Telugu Centre, Potti Sreeramulu Telugu University, Public Gardens, Hyderabad - 500 004 </b>
+    through your Institution Secretary or Academic Secretary<li>
+</ol>
+<br/><br/><br/><br/>
+<div style="text-align:center; font-size: 21px;">- - o - - </div>
+</body>
 </html>"""
     pisa.CreatePDF(sourcehtml.encode('utf-8'),
         dest=packet, encoding = 'utf-8', debug=True)

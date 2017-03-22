@@ -14,8 +14,8 @@
     <br/>
     <table style="width: 100%;">
             <tr>
-                <td rowspan="4" style=" border:1px solid black; width:150px;"></td>
-                <td style="text-align: center; font-family: Times, serif; font-size: 17px; font-weight: bold; width:800px;">POTTI SREERAMULU TELUGU UNIVERSITY</td>
+                <td rowspan="4" style=" width:150px; text-align:right;"><img height="110px" width="100px" src="./image01.png"></td>
+                <td style="text-align: center; font-family: Times, serif; font-size: 17px; font-weight: bold; width:600px;">POTTI SREERAMULU TELUGU UNIVERSITY</td>
                 <td rowspan="4" style="width:100px;"></td>
             </tr>
             <tr>
@@ -40,8 +40,8 @@
     <br/>
     <table style="">
         <tr style="margin-bottom:1px;">
-            <td style="width:70%; font-size: 15px;">ManaBadi Center (City, State)&#58;</td>
-            <td style="width:25%; padding-left:8px; border:1px solid black; padding-top:3px;">Hall Ticket No.</td>
+            <td style="width:70%; font-size: 15px;">ManaBadi Center (City, State)&#58; ({{manabadi_center_city}},{{manabadi_center_state}})</td>
+            <td style="width:25%; padding-left:8px; border:1px solid black; padding-top:3px;">Hall Ticket No. {{hall_ticker_no}}</td>
             <td style="width:5%;"></td>
         </tr>
         <tr style="margin-top:1px; font-size: 15px;">
@@ -59,8 +59,8 @@
    <br/><br/>
     <table style="width: 100%; font-size: 13px;">
         <tr>
-            <td style="width: 50%; border: 1px solid black; border-collapse: collapse; padding-top: 3px; padding-left: 3px;">SUBJECT&#58; TELUGU</td>
-            <td style="width: 50%; border: 1px solid black; border-collapse: collapse; padding-top: 3px; padding-left: 3px;">BATCH&#58; N&#47;A</td>
+            <td style="width: 50%; border: 1px solid black; border-collapse: collapse; padding-top: 3px; padding-left: 3px;">SUBJECT&#58; {{TELUGU}}</td>
+            <td style="width: 50%; border: 1px solid black; border-collapse: collapse; padding-top: 3px; padding-left: 3px;">BATCH&#58; {{N&#47;A}}</td>
         </tr>
     </table>
     <br/>
@@ -69,7 +69,7 @@
         <tr>
             <td rowspan="7" style="width: 40%;height: 1px; border:1px solid black; font-size: 12px; padding: 1%; margin-top: 2px; margin-left: 5px; margin-right: 0px;">Passport size photo of the Candidate to be attested by the Secretary&#47;Head of the Institution concerned with seal of the Office affixed over it.
             <td style="width:5%"></td>
-            <td style="width:55%" Colspan="3">Name of the Candidate (Last, First, Middle)</td>
+            <td style="width:55%" Colspan="3">Name of the Candidate (Last, First, Middle): {{lastname}},{{firstname}},{{middlename}}</td>
         </tr>
         <tr>
             <td style="width:5%"></td>
@@ -77,7 +77,7 @@
         </tr>
         <tr>
             <td style="width:5%"></td>
-            <td style="width:60%">Father&rsquo;s Name (Last,First)</td>
+            <td style="width:60%" Colspan="3">Father&rsquo;s Name (Last,First): {{father_lastname}}{{father_firstname}}</td>
         </tr>
         <tr>
             <td style="width:5%"></td>
@@ -85,8 +85,8 @@
         </tr>
         <tr  style="padding-top:3px; padding-left:3px;">
             <td style="width:5%"></td>
-            <td style="border: 1px solid black; border-collapse: collapse;">Paper - I</td>
-            <td style="border: 1px solid black; border-collapse: collapse;">Paper - II</td>
+            <td style="border: 1px solid black; border-collapse: collapse;">Paper - I  {{first_paper}}</td>
+            <td style="border: 1px solid black; border-collapse: collapse;">Paper - II  {{second_paper}}</td>
             <td style="border: 1px solid black; border-collapse: collapse;">Paper - III Viva-Voce</td>
         </tr>
         <tr>
@@ -96,13 +96,19 @@
             <td></td>
         </tr>
     </table>
-
-    <div style="margin: 40px 0px 0px 550px; font-size: 13px;"><b><i>Signature of the Candidate</i></b></div>
-    <div style=" font-size: 15px; margin-top: 5px;margin-left: 8px;">Certified that the above candidate is appearing in the subjects mentioned above from the Institute of</div>
+    <div style="margin: 40px 0px 0px 590px; font-size: 13px;">{{sign}}</div>
+    <div style="margin: 0px 0px 0px 550px; font-size: 13px;"><b><i>Signature of the Candidate</i></b></div>
+    <div style=" font-size: 15px; margin-top: 5px;margin-left: 8px;">Certified that the above candidate is appearing in the subjects mentioned above from the Institute of <br/>
+        <u>{{institute}}</u>
+    </div>
     
-    <div style="margin-right:600px; border-top: 1px solid black; color:white; margin-top:5px;">1</div>
 
     <table style="width: 100%; margin-top: 80px; font-size: 14px;">
+        <tr style="margin-left: 5px;">
+            <td >{{Secretary_sign}}}</td>
+            <td style="text-align: center;">{{director_sign}}}</td>
+            <td style="text-align: center;">{{Controller_sign}}}</td>
+        </tr>
         <tr style="margin-left: 5px;">
             <td ><i>Signature of the Secretary&#47;</i></td>
             <td style="text-align: center;"><i>Signature of the Director,</i></td>
@@ -116,18 +122,19 @@
     </table>
     <div style="margin-top: 25px;">....................................................................................................................................................................................................................................................................</div>
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        <table style="width: 90%">
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+         <table style="width: 90%">
         <tr style="font-size: 14px;">
-            <td>To be issued to the candidate</td>
+            <td>To be issued to the candidate </td>
             <td align="right">Examination Centre</td>
         </tr>
     </table>
     <br/>
+    <br/>
     <table style="width: 100%;">
             <tr>
-                <td rowspan="4" style=" border:1px solid black; width:150px;"></td>
-                <td style="text-align: center; font-family: Times, serif; font-size: 17px; font-weight: bold; width:800px;">POTTI SREERAMULU TELUGU UNIVERSITY</td>
+                <td rowspan="4" style=" width:150px; text-align:right;"><img height="110px" width="100px" src="./image01.png"></td>
+                <td style="text-align: center; font-family: Times, serif; font-size: 17px; font-weight: bold; width:600px;">POTTI SREERAMULU TELUGU UNIVERSITY</td>
                 <td rowspan="4" style="width:100px;"></td>
             </tr>
             <tr>
@@ -152,8 +159,8 @@
     <br/>
     <table style="">
         <tr style="margin-bottom:1px;">
-            <td style="width:70%; font-size: 15px;">ManaBadi Center (City, State)&#58;</td>
-            <td style="width:25%; padding-left:8px; border:1px solid black; padding-top:3px;">Hall Ticket No.</td>
+            <td style="width:70%; font-size: 15px;">ManaBadi Center (City, State)&#58; ({{manabadi_center_city}},{{manabadi_center_state}})</td>
+            <td style="width:25%; padding-left:8px; border:1px solid black; padding-top:3px;">Hall Ticket No. {{hall_ticker_no}}</td>
             <td style="width:5%;"></td>
         </tr>
         <tr style="margin-top:1px; font-size: 15px;">
@@ -171,16 +178,17 @@
    <br/><br/>
     <table style="width: 100%; font-size: 13px;">
         <tr>
-            <td style="width: 50%; border: 1px solid black; border-collapse: collapse; padding-top: 3px; padding-left: 3px;">SUBJECT&#58; TELUGU</td>
-            <td style="width: 50%; border: 1px solid black; border-collapse: collapse; padding-top: 3px; padding-left: 3px;">BATCH&#58; N&#47;A</td>
+            <td style="width: 50%; border: 1px solid black; border-collapse: collapse; padding-top: 3px; padding-left: 3px;">SUBJECT&#58; {{TELUGU}}</td>
+            <td style="width: 50%; border: 1px solid black; border-collapse: collapse; padding-top: 3px; padding-left: 3px;">BATCH&#58; {{N&#47;A}}</td>
         </tr>
     </table>
     <br/>
+
     <table style="font-size: 14px; width:100%">
         <tr>
             <td rowspan="7" style="width: 40%;height: 1px; border:1px solid black; font-size: 12px; padding: 1%; margin-top: 2px; margin-left: 5px; margin-right: 0px;">Passport size photo of the Candidate to be attested by the Secretary&#47;Head of the Institution concerned with seal of the Office affixed over it.
             <td style="width:5%"></td>
-            <td style="width:55%" Colspan="3">Name of the Candidate (Last, First, Middle)</td>
+            <td style="width:55%" Colspan="3">Name of the Candidate (Last, First, Middle): {{lastname}},{{firstname}},{{middlename}}</td>
         </tr>
         <tr>
             <td style="width:5%"></td>
@@ -188,7 +196,7 @@
         </tr>
         <tr>
             <td style="width:5%"></td>
-            <td style="width:60%">Father&rsquo;s Name (Last,First)</td>
+            <td style="width:60%" Colspan="3">Father&rsquo;s Name (Last,First): {{father_lastname}}{{father_firstname}}</td>
         </tr>
         <tr>
             <td style="width:5%"></td>
@@ -196,8 +204,8 @@
         </tr>
         <tr  style="padding-top:3px; padding-left:3px;">
             <td style="width:5%"></td>
-            <td style="border: 1px solid black; border-collapse: collapse;">Paper - I</td>
-            <td style="border: 1px solid black; border-collapse: collapse;">Paper - II</td>
+            <td style="border: 1px solid black; border-collapse: collapse;">Paper - I  {{first_paper}}</td>
+            <td style="border: 1px solid black; border-collapse: collapse;">Paper - II  {{second_paper}}</td>
             <td style="border: 1px solid black; border-collapse: collapse;">Paper - III Viva-Voce</td>
         </tr>
         <tr>
@@ -207,13 +215,19 @@
             <td></td>
         </tr>
     </table>
-
-    <div style="margin: 40px 0px 0px 550px; font-size: 13px;"><b><i>Signature of the Candidate</i></b></div>
-    <div style=" font-size: 15px; margin-top: 5px;margin-left: 8px;">Certified that the above candidate is appearing in the subjects mentioned above from the Institute of</div>
+    <div style="margin: 40px 0px 0px 590px; font-size: 13px;">{{sign}}</div>
+    <div style="margin: 0px 0px 0px 550px; font-size: 13px;"><b><i>Signature of the Candidate</i></b></div>
+    <div style=" font-size: 15px; margin-top: 5px;margin-left: 8px;">Certified that the above candidate is appearing in the subjects mentioned above from the Institute of <br/>
+        <u>{{institute}}</u>
+    </div>
     
-    <div style="margin-right:600px; border-top: 1px solid black; color:white; margin-top:5px;">1</div>
 
     <table style="width: 100%; margin-top: 80px; font-size: 14px;">
+        <tr style="margin-left: 5px;">
+            <td >{{Secretary_sign}}}</td>
+            <td style="text-align: center;">{{director_sign}}}</td>
+            <td style="text-align: center;">{{Controller_sign}}}</td>
+        </tr>
         <tr style="margin-left: 5px;">
             <td ><i>Signature of the Secretary&#47;</i></td>
             <td style="text-align: center;"><i>Signature of the Director,</i></td>
@@ -225,6 +239,7 @@
             <td style="text-align: center;"><i>Examinations with Seal</i></td>
         </tr>
     </table>
+
 
 </body>
 </html>
