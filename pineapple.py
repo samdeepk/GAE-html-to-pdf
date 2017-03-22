@@ -1,4 +1,3 @@
-
 #!/usr/local/bin/python
 # -*- coding: utf-8 -*-
 
@@ -9,7 +8,7 @@ from xhtml2pdf import pisa
 
 
 app = Flask(__name__)
-
+app.config['DEBUG'] = True
 
 @app.route('/pdf/')
 def hello_pdf():
@@ -17,13 +16,35 @@ def hello_pdf():
 
     packet = StringIO.StringIO()
 
-    sourcehtml = u"""<!DOCTYPE html>
+    sourcehtml = u"""<!DOCTYPE html> 
     <html>
     <head>
-        <title>Annual Examinations</title>
+        <title>Annual Examinations దిగుమతి కై सरल</title>
+        
+        <style>
+        @font-face {
+        font-family: SreeKrushnadevaraya;
+        src: url("/Users/skoduri/me/test/GAE-html-to-pdf/SreeKrushnadevaraya.ttf");
+        }
+        .tets{background-image: url('https://storage.googleapis.com/html2pdf-statics/gcp.png'); }
+        body {
+            
+        font-family: SreeKrushnadevaraya;
+        }
+    </style>  
     </head>
     <body style="font-family: times; font-size: 15px;">
-    <div style="font-size: 13px;text-align: right;"> Centre&#58;</div><br/>
+    <div style="font-size: 13px;text-align: right; font-family: 'Sree Krushnadevaraya'"> Centre&#58; దిగుమతి కై  सरल   
+తెలుగు వర్ణమాల
+
+హలో
+ </div><br/>
+ <div class="tets" style="border:1px solid red; width:100px; height:100px;">
+
+ <img src="https://storage.googleapis.com/html2pdf-statics/gcp.png"></div>
+ <div >
+
+ 
      <table style="width: 100%;">
         <tr>
             <td rowspan="4" style=" border:1px solid black; width:150px;"></td>
@@ -247,9 +268,8 @@ def hello_pdf():
         </table>
     </body>
 </html>"""
-    pisa.CreatePDF(
-        sourcehtml,
-        dest=packet)
+    pisa.CreatePDF(sourcehtml.encode('utf-8'),
+        dest=packet, encoding = 'utf-8', debug=True)
 
     packet.seek(0)
     return send_file(packet, attachment_filename="willi.pdf", as_attachment=False)
