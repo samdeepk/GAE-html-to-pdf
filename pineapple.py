@@ -23,6 +23,18 @@ def hello_pdf():
 </head>
 <body style="width: 100%; font-family: Times, serif;">
 
+<!-- <style>
+    .collapes_row1{
+        padding-top:-20px;
+    }
+    .collapes_row2{
+        padding-top:-10px;
+    }
+    .collapes_row3{
+        display:none;
+    }
+</style> -->
+
 <table style="width: 100%;">
     <tr>
         <td rowspan="4" style=" width:20%;"><img height="240px" width="240px" src="./image01.png"></td>
@@ -51,11 +63,11 @@ def hello_pdf():
         <tr>
             <td style="width: 4%;">1.</td>
             <td style="width: 42%;"></td>
-            <td style="width: 48%; ">&#58; Silicon Andhra ManaBadi</td>
+            <td style="width: 48%;">&#58; Silicon Andhra ManaBadi</td>
         </tr>
         <tr>
             <td style="width: 4%; "></td>
-            <td style="width: 42%; ">Name of the Institution & Address</td>
+            <td style="width: 42%;" class="collapes_row1">Name of the Institution & Address</td>
             <td style="width: 48%; ">7912 August Lane, Cupertino CA 95014, USA</td>
         </tr>
     </table>
@@ -70,9 +82,9 @@ def hello_pdf():
         </tr>
     </table>
     <table style="width: 100%; font-size: 14px;">
-        <tr style="padding-top:5px;">
+        <tr style="padding-top:3px;">
             <td style="width: 5%;"></td>
-            <td style="width: 40%;">Name of the Country & State</td>
+            <td style="width: 40%;" class="collapes_row1">Name of the Country & State</td>
             <td style="width: 11%;">COUNTRY&#58;</td>
             <td style="width: 25%; border-bottom: 1px solid black; ">{{country}}</td>
             <td style="width: 24%;"></td>
@@ -88,12 +100,12 @@ def hello_pdf():
         </tr>
         <tr>
             <td style="width: 5%; "></td>
-            <td style="width: 45%; ">Affiliation details</td>
-            <td style="width: 50%; ">{{&#58;N/A}}</td>
+            <td style="width: 45%;" class="collapes_row1">Affiliation details</td>
+            <td style="width: 50%;">{{&#58;N/A}}</td>
         </tr>
         <tr>
             <td style="width: 5%; "></td>
-            <td style="width: 45%; ">(Mention affiliation number and year)</td>
+            <td style="width: 45%;" class="collapes_row1">(Mention affiliation number and year)</td>
         </tr>
     </table>
 
@@ -106,13 +118,13 @@ def hello_pdf():
         </tr>
         <tr>
             <td style="width: 5%; "></td>
-            <td style="width: 40%; ">Name of the Candidate in Full</td>
+            <td style="width: 40%;" class="collapes_row1">Name of the Candidate in Full</td>
             <td style="width: 1%;"></td>
-            <td style="width: 54%; padding-top:3px;">(Last Name, First Name and Middle Name)</td>
+            <td style="width: 54%; padding-top:3px;" class="collapes_row1">(Last Name, First Name and Middle Name)</td>
         </tr>
         <tr>
             <td style="width: 5%; "></td>
-            <td style="width: 40%; ">(CAPITAL LETTERS)</td>
+            <td style="width: 40%;" class="collapes_row1">(CAPITAL LETTERS)</td>
             <td style="width: 1%;"></td>
             <td style="width: 54%;"></td>
         </tr>
@@ -127,9 +139,9 @@ def hello_pdf():
         </tr>
         <tr>
             <td style="width: 5%; "></td>
-            <td style="width: 40%; padding-top:3px;">Father&#39;s  Husband&#39;s Name</td>
+            <td style="width: 40%;" class="collapes_row1">Father&#39;s  Husband&#39;s Name</td>
             <td style="width: 1%;"></td>
-            <td style="width: 53%;">(Last Name, First Name)</td>
+            <td style="width: 53%; padding-top:3px;">(Last Name, First Name)</td>
         </tr>
     </table>
 
@@ -141,7 +153,7 @@ def hello_pdf():
         </tr>
         <tr>
             <td style="width: 5%; "></td>
-            <td style="width: 40%; ">Candidate&#39;s Date of Birth & Age </td>
+            <td style="width: 40%; " class="collapes_row2">Candidate&#39;s Date of Birth & Age </td>
             <td style="width: 20%;"></td>
         </tr>
     </table>
@@ -154,8 +166,8 @@ def hello_pdf():
         </tr>
         <tr>
             <td style="width: 5%; "></td>
-            <td style="width: 40%; ">Affiliation details</td>
-            <td style="width: 48%; ">&#58;{{N/A}}</td>
+            <td style="width: 40%; " class="collapes_row2">Affiliation details</td>
+            <td style="width: 48%; " class="collapes_row2">&#58;{{N/A}}</td>
         </tr>
     </table>
 
@@ -168,7 +180,7 @@ def hello_pdf():
         </tr>
         <tr>
             <td style="width: 5%;"></td>
-            <td style="width: 41%;">Current Address  Email</td>
+            <td style="width: 41%;" class="collapes_row1">Current Address  Email</td>
             <td style="width: 8%;"></td>
             <td style="width: 46%; border-bottom: 1px solid black;">{{address}}</td>
         </tr>
@@ -194,7 +206,7 @@ def hello_pdf():
         </tr>
         <tr>
             <td style="width: 5%; "></td>
-            <td style="width: 41%; ">Mother tongue </td>
+            <td style="width: 41%; " class="collapes_row2">Mother tongue </td>
             <td style="width: 48%; "></td>
         </tr>
     </table>
@@ -207,12 +219,12 @@ def hello_pdf():
         </tr>
         <tr>
             <td style="width: 5%; "></td>
-            <td style="width: 41%; ">Nationality</td>
+            <td style="width: 41%; " class="collapes_row2">Nationality</td>
             <td style="width: 48%; "></td>
         </tr>
     </table>
 
-    <br/>
+    <br/><br/>
     <table style="width: 100%; font-size: 14px;">
         <tr>
             <td style="width: 5%; ">11.</td>
@@ -221,7 +233,7 @@ def hello_pdf():
         </tr>
         <tr>
             <td style="width: 5%; "></td>
-            <td style="width: 41%; ">Please tick (&#10004;) the appropriate column</td>
+            <td style="width: 41%; " class="collapes_row2">Please tick (&#10004;) the appropriate column</td>
             <td style="width: 48%; "></td>
         </tr>
     </table>
@@ -239,13 +251,13 @@ def hello_pdf():
         </tr>
         <tr>
             <td style="width: 5%;"></td>
-            <td style="width: 10%; text-align:center;">Male</td>
+            <td style="width: 10%; text-align:center;" class="collapes_row2">Male</td>
             <td style="width: 10%; text-align:center; width:20px; height:8px"></td>
-            <td style="width: 10%; text-align:center;">Female</td>
+            <td style="width: 10%; text-align:center;" class="collapes_row2">Female</td>
             <td style="width: 10%; text-align:center; width:20px; height:8px"</td>
-            <td style="width: 10%; text-align:center;">Married</td>
+            <td style="width: 10%; text-align:center;" class="collapes_row2">Married</td>
             <td style="width: 10%; text-align:center; width:20px; height:8px"></td>
-            <td style="width: 10%; text-align:center;">Unmarried</td>
+            <td style="width: 10%; text-align:center;" class="collapes_row2">Unmarried</td>
             <td style="width: 10%; text-align:center; width:20px; height:8px"></td>
         </tr>
     </table>
@@ -261,11 +273,11 @@ def hello_pdf():
         </tr>
         <tr>
             <td style="width: 5%;"></td>
-            <td style="width: 15%; text-align:center;">Phy. Handicapped</td>
+            <td style="width: 15%; text-align:center;" class="collapes_row2">Phy. Handicapped</td>
             <td style="width: 10%; text-align:center; width:20px; height:8px"></td>
-            <td style="width: 10%; text-align:center;">Urban</td>
+            <td style="width: 10%; text-align:center;" class="collapes_row2">Urban</td>
             <td style="width: 10%; text-align:center; width:20px; height:8px"</td>
-            <td style="width: 10%; text-align:center;">Rural</td>
+            <td style="width: 10%; text-align:center;" class="collapes_row2">Rural</td>
             <td style="width: 10%; text-align:center; width:20px; height:8px"></td>
         </tr>
     </table>
@@ -278,7 +290,7 @@ def hello_pdf():
         </tr>
         <tr>
             <td style="width: 5%;"></td>
-            <td style="width: 50%;">Educational Qualifications</td>
+            <td style="width: 50%;" class="collapes_row2">Educational Qualifications</td>
             <td></td>
         </tr>
     </table>
@@ -354,7 +366,7 @@ def hello_pdf():
     </table>
 <br/>
 <br/>
-<br/><br/><br/><br/>
+<br/><br/><br class="collapes_row3"/><br class="collapes_row3"/>
     <table style="font-size: 17px;">
         <tr>
             <td style="margin-left:50px;">{{}}</td>
@@ -375,21 +387,22 @@ def hello_pdf():
     </table>
 <br/>
 <br/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br class="collapes_row3" /><br class="collapes_row3"/><br class="collapes_row3"/><br class="collapes_row3"/><br class="collapes_row3"/><br class="collapes_row3"/><br class="collapes_row3"/>
 
 <div style="text-align:center; font-size: 21px;"><b>Rules & Regulations</b></div>
 <ol style="font-size: 16px;">
-    <li><br/>Incomplete applications will be summarily rejected.<li>
-    <li><br/>Any false information furnished by the candidate and or if the information furnished not in accordance with the rules and regulations, stipulate therein the admission is liable for cancellation<li>
-    <li><br/> The following shall be enclosed with the application
+    <li><br class="collapes_row3"/>Incomplete applications will be summarily rejected.</li>
+    <li><br class="collapes_row3"/>Any false information furnished by the candidate and or if the information 
+    furnished not in accordance with the rules and regulations, stipulate therein the admission is liable for cancellation.<l/i>
+    <li><br class="collapes_row3"/> The following shall be enclosed with the application
         <br/>Affix latest passport size photograph, in the specified place and enclose an extra photograph for office use.
-        <br/>b)<br>A set of Xerox copies of S.S.C. Marks Statement or your Education Qualifications.
-    <li>
+        <br/>b)<br class="collapes_row3"/>A set of Xerox copies of S.S.C. Marks Statement or your Education Qualifications.
+    </li>
     <li>The application, duly filled-in, along with the necessary enclosures, should be sent to the 
     <b>Director I/c, M.V.K.R. International Telugu Centre, Potti Sreeramulu Telugu University, Public Gardens, Hyderabad - 500 004 </b>
-    through your Institution Secretary or Academic Secretary<li>
+    through your Institution Secretary or Academic Secretary</li>
 </ol>
-<br/><br/><br/><br/>
+<br/><br class="collapes_row3"/><br class="collapes_row3"/><br class="collapes_row3"/>
 <div style="text-align:center; font-size: 21px;">- - o - - </div>
 </body>
 </html>"""
